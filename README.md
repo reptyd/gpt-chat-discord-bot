@@ -42,28 +42,13 @@ Bring the power of GPT to Discord servers.  Instead of leaving the platform to u
 
 By default the bot listens to the `!chat` command.  In any channel where the bot is present, type:
 
-```
+`
 !chat What is the difference between a list and a tuple in Python?
 ```
 
 The bot will respond with an answer.  The last five interactions with the bot are stored per user per channel to maintain a short conversation history.  Once the limit is reached the oldest messages are discarded.
 
-## Demonstration idea (≤2 min)
-
-1. Start recording and introduce the bot in a test channel.
-2. Show how to ask a question using `!chat` and demonstrate the GPT‑generated reply.
-3. Ask a follow‑up question to showcase that the bot remembers previous context for the user within the channel.
-4. Open a different channel or use a different user to show that histories are isolated.
-5. Emphasise that the bot uses the OpenAI API and can be extended for other tasks (translation, summarisation, code explanation, etc.).
-
-## Possible extensions for a client
-
-* **Persistent history** – store conversation logs in a database to provide longer context windows.
-* **Rate limiting** – implement per‑user quotas to manage API costs.
-* **Slash commands** – migrate from prefixed commands to Discord’s slash commands for a more native UX.
-* **Rich formatting** – support code blocks and markdown in responses.
-* **Multiple models** – allow users to choose between GPT 3.5 and GPT‑4 or other models via command options.
-
-## Notes on usage
+es on usage
 
 This bot uses the `openai.ChatCompletion` endpoint.  Make sure your OpenAI API usage is within your quota.  The conversation context is limited to five messages per user per channel to control token usage and costs.  Feel free to adjust the `MAX_HISTORY` constant in the code to balance context versus cost.
+
